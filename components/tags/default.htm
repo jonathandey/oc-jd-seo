@@ -1,0 +1,9 @@
+{% partial '@title' %}
+
+{% if __SELF__.meta.description %}
+	{% partial '@description' %}
+{% endif %}
+
+{% if __SELF__.meta.keywords %}
+	{% partial '@keywords' %}
+{% endif %}
