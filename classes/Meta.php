@@ -12,6 +12,8 @@ class Meta
 
 	protected $keywords = [];
 
+	protected $canonicalUrl;
+
 	public function __construct($title = null, $description = null)
 	{
 		$this->title = $title;
@@ -55,6 +57,17 @@ class Meta
 		}
 
 		$this->keywords = $keywords;
+
+		return $this;
+	}
+
+	public function canonicalUrl($canonicalUrl = null)
+	{
+		if(is_null($canonicalUrl)) {
+			return $this->canonicalUrl;
+		}
+
+		$this->canonicalUrl = $canonicalUrl;
 
 		return $this;
 	}

@@ -7,3 +7,7 @@
 {% if __SELF__.meta.keywords %}
 	{% partial '@keywords' %}
 {% endif %}
+
+{% if __SELF__.meta.canonicalUrl %}
+	{% partial '@canonicalurl' %}
+{% endif %}

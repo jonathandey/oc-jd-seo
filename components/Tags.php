@@ -2,6 +2,7 @@
 
 namespace JD\SEO\Components;
 
+use Request;
 use JD\SEO\SEO;
 use Cms\Classes\Page;
 use Cms\Classes\Theme;
@@ -42,6 +43,7 @@ class Tags extends ComponentBase
 
         $this->meta = SEO::meta($title, $description)
             ->appendTitle($appendTitle)
+            ->canonicalUrl(Request::url())
         ;
     }
 }
