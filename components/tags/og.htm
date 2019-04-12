@@ -1,0 +1,35 @@
+{% if __SELF__.meta.og.fbAppId %}
+	<meta property="fb:app_id" content="{{ __SELF__.meta.og.fbAppId }}">
+{% endif %}
+
+{% if __SELF__.meta.og.url %}
+	<meta property="og:url" content="{{ __SELF__.meta.og.url }}">
+{% endif %}
+
+{% if __SELF__.meta.og.type %}
+	<meta property="og:type" content="{{ __SELF__.meta.og.type }}">
+{% endif %}
+
+{% if __SELF__.meta.og.title %}
+	<meta property="og:title" content="{{ __SELF__.meta.og.title }}">
+{% endif %}
+
+{% if __SELF__.meta.og.image %}
+	<meta property="og:image" content="{{ __SELF__.meta.og.image }}">
+{% endif %}
+
+{% if __SELF__.meta.og.description %}
+	<meta property="og:description" content="{{ __SELF__.meta.og.description }}">
+{% endif %}
+
+{% if __SELF__.meta.og.siteName %}
+	<meta property="og:site_name" content="{{ __SELF__.meta.og.siteName }}">
+{% endif %}
+
+{% if __SELF__.meta.og.locale %}
+	<meta property="og:locale" content="{{ __SELF__.meta.og.locale }}">
+{% endif %}
+
+{% if __SELF__.meta.og.articleAuthor %}
+	<meta property="article:author" content="{{ __SELF__.meta.og.articleAuthor }}">
+{% endif %}

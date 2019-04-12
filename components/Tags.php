@@ -2,7 +2,6 @@
 
 namespace JD\SEO\Components;
 
-use Request;
 use JD\SEO\SEO;
 use Cms\Classes\Page;
 use Cms\Classes\Theme;
@@ -36,14 +35,13 @@ class Tags extends ComponentBase
         $theme = Theme::getActiveTheme();
         $themeData = $theme->getCustomData();
 
-        $appendTitle = ' | ' . $themeData->site_name;
+        $appendTitle = ($themeData->site_name) ? ' | ' . $themeData->site_name : null;
 
         $title = ($this->page->meta_title)?: $this->page->title . $appendTitle;
         $description = $this->property('metaDescription', ($this->page->meta_description)?: null);
 
         $this->meta = SEO::meta($title, $description)
             ->appendTitle($appendTitle)
-            ->canonicalUrl(Request::url())
         ;
     }
 }

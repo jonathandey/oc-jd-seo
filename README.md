@@ -20,8 +20,29 @@ Programmatically controlling your output will override a pages meta title and de
     
     public function onRun()
     {
-        SEO::meta()->title('My awesome page')
-            ->description('This is my awesome page description.')
+        SEO::meta()->title($title)
+            ->description($description)
+            // Google / Schema.org tags
+            ->schema([
+                'name' => $title,
+                'description' => $description,
+                'image' => $image,
+            ])
+            // Twitter tags
+            ->twitter([
+                'title' => $title,
+                'description' => $description,
+                'image' => $image,
+                'url' => 'https://my-awesome-site.com',
+            ])            
+            // OpenGraph tags
+            ->og([
+                'site_name' => 'My Awesome site',
+                'url' => 'https://my-awesome-site.com',
+                'title' => $title,
+                'description' => $description,
+                'image' => $image,
+            ])
             ->keywords(['awesome', 'page'])
         ;
     }

@@ -8,6 +8,14 @@
 	{% partial '@keywords' %}
 {% endif %}
 
-{% if __SELF__.meta.canonicalUrl %}
-	{% partial '@canonicalurl' %}
+{% if __SELF__.meta.og %}
+	{% partial '@og' %}
+{% endif %}
+
+{% if __SELF__.meta.schema %}
+	{% partial '@schema' %}
+{% endif %}
+
+{% if __SELF__.meta.twitter %}
+	{% partial '@twitter' %}
 {% endif %}

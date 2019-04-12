@@ -1,0 +1,27 @@
+{% if __SELF__.meta.twitter.card %}
+	<meta name="twitter:card" content="{{ __SELF__.meta.twitter.card }}">
+{% endif %}
+
+{% if __SELF__.meta.twitter.title %}
+	<meta name="twitter:title" content="{{ __SELF__.meta.twitter.title }}">
+{% endif %}
+
+{% if __SELF__.meta.twitter.description %}
+	<meta name="twitter:description" content="{{ __SELF__.meta.twitter.description }}">	
+{% endif %}
+
+{% if __SELF__.meta.twitter.image %}
+	<meta name="twitter:image" content="{{ __SELF__.meta.twitter.image }}">	
+{% endif %}
+
+{% if __SELF__.meta.twitter.site %}
+	<meta name="twitter:site" content="{{ __SELF__.meta.twitter.site }}">
+{% endif %}
+
+{% if __SELF__.meta.twitter.creator %}
+	<meta name="twitter:creator" content="{{ __SELF__.meta.twitter.creator }}">
+{% endif %}
+
+{% if __SELF__.meta.twitter.url %}
+	<meta name="twitter:url" content="{{ __SELF__.meta.twitter.url }}">
+{% endif %}

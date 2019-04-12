@@ -1,0 +1,11 @@
+{% if __SELF__.meta.schema.name %}
+	<meta itemprop="name" content="{{ __SELF__.meta.schema.name }}">
+{% endif %}
+
+{% if __SELF__.meta.schema.description %}
+	<meta itemprop="description" content="{{ __SELF__.meta.schema.description }}">
+{% endif %}
+
+{% if __SELF__.meta.schema.image %}
+	<meta itemprop="image" content="{{ __SELF__.meta.schema.image }}">
+{% endif %}

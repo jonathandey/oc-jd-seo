@@ -12,7 +12,11 @@ class Meta
 
 	protected $keywords = [];
 
-	protected $canonicalUrl;
+	protected $og;
+
+	protected $schema;
+
+	protected $twitter;
 
 	public function __construct($title = null, $description = null)
 	{
@@ -61,13 +65,35 @@ class Meta
 		return $this;
 	}
 
-	public function canonicalUrl($canonicalUrl = null)
+	public function og(array $ogProperties = null)
 	{
-		if(is_null($canonicalUrl)) {
-			return $this->canonicalUrl;
-		}
+		if(is_null($ogProperties)) {
+			return $this->og;
+		}		
 
-		$this->canonicalUrl = $canonicalUrl;
+		$this->og = new OpenGraph($ogProperties);
+
+		return $this;
+	}
+
+	public function schema(array $schemaProperties = null)
+	{
+		if(is_null($schemaProperties)) {
+			return $this->schema;
+		}		
+
+		$this->schema = new Schema($schemaProperties);
+
+		return $this;
+	}
+
+	public function twitter(array $twitterProperties = null)
+	{
+		if(is_null($twitterProperties)) {
+			return $this->twitter;
+		}		
+
+		$this->twitter = new Twitter($twitterProperties);
 
 		return $this;
 	}
